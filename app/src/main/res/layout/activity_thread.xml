@@ -10,8 +10,57 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.samtrent.threadingprogram.threadActivity">
 
-    <TextView
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="900dp"
+        android:layout_height="50dp"
+        android:id="@+id/progressBar"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:max="100" />
+
+    <ListView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/listView"
+        android:layout_above="@+id/createbutton"
+        android:layout_alignStart="@+id/createbutton"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Load"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:id="@+id/loadButton"
+        android:layout_below="@+id/listView"
+        android:layout_centerHorizontal="true"
+        android:onClick="LoadButtonClicked" />
+
+    <Button
+        android:text="Clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/clearButton"
+        android:layout_below="@+id/listView"
+        android:layout_alignParentEnd="true"
+        android:onClick="ClearButtonClicked" />
+
+    <Button
+        android:text="Create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:id="@+id/createbutton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:onClick="CreateButtonClicked" />
+
+    <TextView
+        android:text="Progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/progressTextView" />
 </RelativeLayout>
